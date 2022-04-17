@@ -3,9 +3,9 @@ Setup a Windows Machine with Chocolatey + Git Bash scripts
 
 ## Preconditions
 
-Download a VirtualBox image of (Windows 10 from Microsoft)[https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/]
+Download a VirtualBox image of [Windows 10 from Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)
 
-Install all the Windows updates and do the reboots. I also added 7zip, because my target system will come with it pre-installed. Open in IE11: https://boxstarter.org/package/7zip
+Install all the Windows updates and do the reboots. I also added 7zip, because my target system will come with it pre-installed. Open in IE11: `https://boxstarter.org/package/7zip`
 
 ## Usage
 
