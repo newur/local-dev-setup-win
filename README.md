@@ -17,26 +17,27 @@ https://boxstarter.org/package/git,jetbrainstoolbox,intellijidea-ultimate,docker
 
 Fastlane for testing (just git bash): https://boxstarter.org/package/git
 
-Run in Git Bash:
-
-```bash
-git clone https://github.com/newur/local-dev-setup-win.git \
-  && cd local-dev-setup-win
-```
-<!-- # TODO add aliases to run dev launcher to .bashrc
-# aliases and JIRA-git-commit-msg-function
-# run before sdkman to not overwrite .bashrc -->
 Run in Git **Bash as Administrator**:
 
 ```bash
 cp $(which 7z) /c/ProgramData/chocolatey/bin/zip.exe
 ```
 
+Run in _non-admin_ Git Bash:
+
 ```bash
-cp bashrc ~/.bashrc \
-  && cp inputrc ~/.inputrc \
-\
-&& curl -s "https://get.sdkman.io" | bash \
+git clone https://github.com/newur/local-dev-setup-win.git \
+  && cd local-dev-setup-win
+  && cp bashrc ~/.bashrc \
+  && cp inputrc ~/.inputrc
+```
+<!-- # TODO add aliases to run dev launcher to .bashrc
+# aliases and JIRA-git-commit-msg-function
+# run before sdkman to not overwrite .bashrc -->
+
+
+```bash
+curl -s "https://get.sdkman.io" | bash \
   && source ~/.bashrc \
   && sdk env install
 ```
@@ -50,8 +51,12 @@ cp bashrc ~/.bashrc \
 ```bash
 # TODO checkout verticals and other esp projects
 ./cloneGitRepos.sh
+```
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash \
+  && source ~/.bashrc \
+  && nvm install --lts
 
 # TODO run taiko to create a valid customer gitSetup
 
