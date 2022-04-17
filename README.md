@@ -20,10 +20,14 @@ Fastlane for testing (just git bash): https://boxstarter.org/package/git
 Run in Git Bash:
 
 ```bash
-# TODO add aliases to run dev launcher to .bashrc
-
+git clone https://github.com/newur/local-dev-setup-win.git \
+  && cd local-dev-setup-win
+```
+<!-- # TODO add aliases to run dev launcher to .bashrc
 # aliases and JIRA-git-commit-msg-function
-# run before sdkman to not overwrite .bashrc
+# run before sdkman to not overwrite .bashrc -->
+```bash
+
 cp bashrc ~/.bashrc \
   && cp inputrc ~/.inputrc
 ```
@@ -32,13 +36,13 @@ cp bashrc ~/.bashrc \
 cp $(which 7z) /c/ProgramData/chocolatey/bin/zip.exe \
   && curl -s "https://get.sdkman.io" | bash \
   && source ~/.bashrc \
-  && sdk env install        # will set java/maven/jbang version as default
+  && sdk env install
 ```
 
 ```bash
 ./gitSetup.sh \
-  && cp pre-push ~/.config/git/template/hooks/ \ # depends on gitSetup.sh for creating dir
-  && ./createSshKey.sh      # depends on gitSetup.sh for email address
+  && cp pre-push ~/.config/git/template/hooks/ \
+  && ./createSshKey.sh
 ```
 
 ```bash
