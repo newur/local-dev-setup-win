@@ -15,6 +15,8 @@ Install the basic applications with opening this link in IE11:
 https://boxstarter.org/package/git,jetbrainstoolbox,intellijidea-ultimate,docker-desktop
 ```
 
+Fastlane for testing (just git bash): https://boxstarter.org/package/git
+
 Run in Git Bash:
 
 ```bash
@@ -30,16 +32,13 @@ cp bashrc ~/.bashrc \
 cp $(which 7z) /c/ProgramData/chocolatey/bin/zip.exe \
   && curl -s "https://get.sdkman.io" | bash \
   && source ~/.bashrc \
-# will set java/maven/jbang version as default
-  && sdk env install
+  && sdk env install        # will set java/maven/jbang version as default
 ```
 
 ```bash
 ./gitSetup.sh \
-# depends on gitSetup.sh for creating dir
-  && cp pre-push ~/.config/git/template/hooks/ \
-# depends on gitSetup.sh for email address
-  && ./createSshKey.sh
+  && cp pre-push ~/.config/git/template/hooks/ \ # depends on gitSetup.sh for creating dir
+  && ./createSshKey.sh      # depends on gitSetup.sh for email address
 ```
 
 ```bash
