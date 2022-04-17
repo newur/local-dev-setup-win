@@ -26,15 +26,17 @@ git clone https://github.com/newur/local-dev-setup-win.git \
 <!-- # TODO add aliases to run dev launcher to .bashrc
 # aliases and JIRA-git-commit-msg-function
 # run before sdkman to not overwrite .bashrc -->
-```bash
+Run in Git **Bash as Administrator**:
 
-cp bashrc ~/.bashrc \
-  && cp inputrc ~/.inputrc
+```bash
+cp $(which 7z) /c/ProgramData/chocolatey/bin/zip.exe
 ```
 
 ```bash
-cp $(which 7z) /c/ProgramData/chocolatey/bin/zip.exe \
-  && curl -s "https://get.sdkman.io" | bash \
+cp bashrc ~/.bashrc \
+  && cp inputrc ~/.inputrc \
+\
+&& curl -s "https://get.sdkman.io" | bash \
   && source ~/.bashrc \
   && sdk env install
 ```
