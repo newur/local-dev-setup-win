@@ -20,6 +20,6 @@ git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.cam commit -am
 
-GIT_CONFIG_DIR="~/.config/git/template/hooks/"
-mkdir -p ${GIT_CONFIG_DIR}
-git config --global init.templatedir ${GIT_CONFIG_DIR}
+
+mkdir -p ~/.config/git/template/hooks/
+git config --global init.templatedir ~/.config/git/template/hooks/

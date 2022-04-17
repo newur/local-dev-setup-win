@@ -7,4 +7,4 @@ cat ~/.ssh/id_rsa.pub | clip
 echo ""
 echo "Copied your public SSH key into your clipboard"
 echo ""
-echo "Paste the at: https://github.com/settings/ssh/new"
+echo "Paste the key at: https://github.com/settings/ssh/new"
