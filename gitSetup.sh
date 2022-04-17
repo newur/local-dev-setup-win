@@ -22,4 +22,4 @@ git config --global alias.cam commit -am
 
 
 mkdir -p ~/.config/git/template/hooks/
-git config --global init.templatedir ~/.config/git/template/hooks/
+git config --global init.templatedir ~/.config/git/template/
