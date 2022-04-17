@@ -1,0 +1,23 @@
+#!/bin/bash
+mvn spotless:check
+
+if [ $? -ne 0 ]
+then
+    echo "Spotless failure! Running Spotless:apply"
+    mvn spotless:apply
+    git reset --soft HEAD~1
+    echo "Commit changed files and try to push again."
+    exit -1
+else
+    echo "Spotless success!"
+fi
+
+mvn checkstyle:check
+if [ $? -ne 0 ]
+then
+    echo "Checkstyle failure!"
+    exit -1
+else
+    echo "Checkstyle success!"
+    exit
+fi
